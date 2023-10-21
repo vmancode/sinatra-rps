@@ -11,69 +11,44 @@ end
 
 
 get("/rock") do
-
-  #myplay = ["rock", "paper", "scissor"]
-  #compplay = ["rock", "paper", "scissor"]
-
-  #myplay1 = myplay.sample
-  #compplay1 = compplay.sample
-
-  #if myplay1 == compplay1
-  #  outcome = "tied"
-  #elsif myplay1 == "rock" && compplay1 == "paper"
-  #  outcome = "lost"
-  #elsif myplay1 == "paper" && compplay1 == "scissor"
-  #  outcome = "lost"
-  #elsif myplay1 == "scissor" && compplay1 == "rock"
-  #  outcome = "lost"  
-  #else
-  #  outcome = "won"
-  #end
-
-
-  moves = ["rock", "paper", "scissor"]
-  @comp_move = moves.sample
-
-  if @comp_move == "rock"
-    @outcome = "tied"
-  elsif @comp_move == "scissor"
-    @outcome = "won"
+  moves1 = ["rock", "paper", "scissors"]
+  @comp_move1 = moves1.sample
+  if @comp_move1 == "rock"
+    @outcome1 = "tied"
+  elsif @comp_move1 == "scissors"
+    @outcome1 = "won"
   else
-    @outcome  = "lost"
+    @outcome1  = "lost"
   end
-
-
   erb(:zebra)
 end
 
 
 get("/paper") do
-
-  moves = ["rock", "paper", "scissor"]
-  @comp_move = moves.sample
-
-  if @comp_move == "rock"
-    @outcome = "won"
-  elsif @comp_move == "scissor"
-    @outcome = "lost"
+  moves2 = ["rock", "paper", "scissors"]
+  @comp_move2 = moves2.sample
+  if @comp_move2 == "rock"
+    @outcome2 = "won"
+  elsif @comp_move2 == "scissors"
+    @outcome2 = "lost"
   else
-    @outcome  = "tied"
+    @outcome2  = "tied"
   end
   erb(:giraffe)
 end
 
 
-get("/scissor") do
+get("/scissors") do
 
-  moves = ["rock", "paper", "scissor"]
-  @comp_move = moves.sample
+  moves3 = ["rock", "paper", "scissors"]
+  @comp_move3 = moves3.sample
 
-  if @comp_move == "rock"
-    @outcome = "lost"
-  elsif @comp_move == "scissor"
-    @outcome = "tied"
+  if @comp_move3 == "rock"
+    @outcome3 = "lost"
+  elsif @comp_move3 == "scissors"
+    @outcome3 = "tied"
   else
-    @outcome  = "won"
+    @outcome3  = "won"
   end
-  erb(:scissor)
+  erb(:horse)
 end
